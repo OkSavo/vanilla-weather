@@ -1,5 +1,25 @@
+function formateDate(timestamp) {
+  let date = new Date(timestamp);
+  // let currentDate = date.toLocaleDateString();
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+
+  let currentDay = days[date.getDay()];
+  let currentTime = date.toLocaleTimeString([], {
+    hour: "2-digit",
+    minute: "2-digit",
+  });
+  return `${currentDay}  ${currentTime}`;
+}
+
 function displayTemp(response) {
-  console.log(response.data);
   let tempElement = document.querySelector("#temperature");
   tempElement.innerHTML = Math.round(response.data.main.temp);
 
@@ -14,6 +34,9 @@ function displayTemp(response) {
 
   let windElement = document.querySelector("#wind");
   windElement.innerHTML = Math.round(response.data.wind.speed);
+
+  let dateElement = document.querySelector("#current-date");
+  dateElement.innerHTML = formateDate(response.data.dt * 1000);
 }
 
 let apiKey = "a60b931947ef27861e5c5ca7e5bbaf05";
