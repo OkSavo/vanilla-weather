@@ -17,7 +17,6 @@ body {
   margin-bottom: 20px;
 }
 h1 {
-  color: #323232;
   font-size: 24px;
   font-weight: 100;
   line-height: 28px;
@@ -60,6 +59,7 @@ li::first-letter {
 .btn {
   background-color: transparent;
 }
+
 .card {
   background-color: transparent;
 }
