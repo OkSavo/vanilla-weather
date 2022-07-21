@@ -26,7 +26,7 @@
         <div class="weather">
           <form id="search-form" class="mb-3">
             <div class="row">
-              <div class="col-9">
+              <div class="col-5">
                 <input
                   type="search"
                   placeholder="Tipe a city "
@@ -34,11 +34,11 @@
                   id="city-input"
                 />
               </div>
-              <div class="col-3">
+              <div class="col-2">
                 <input
                   type="submit"
                   value="Search"
-                  class="btn btn-primary w-100"
+                  class="class="btn btn-outline-secondary w-100"
                 />
               </div>
             </div>
@@ -47,11 +47,12 @@
             <h1 id="city">London</h1>
             <ul>
               <li id="current-date">Friday 08.00</li>
-              <li><span id="description">Clear</span></li>
+              <br />
+              <li><span id="description" class="mb-3">Clear</span></li>
             </ul>
           </div>
           <div class="row">
-            <div class="col-6">
+            <div class="col-7">
               <div class="clearfix weather-img weather-temp">
                 <img src="" alt=" " id="icon" />
 
@@ -61,13 +62,66 @@
                 </div>
               </div>
             </div>
-            <div class="col-6">
+            <div class="col-5">
               <ul>
-                <li>Humidity:<span id="humidity">5</span>%</li>
-                <li>Wind: <span id="wind">5</span>km/h</li>
+                <li>Humidity: <span id="humidity"> </span>%</li>
+                <li>Wind: <span id="wind"></span> km/h</li>
               </ul>
             </div>
           </div>
+          <div class="conteiner3">
+          <form>
+        <div class="row">
+          <div class="col">
+            <div class="card" style="width: 5rem">
+              Mon <br />
+             <i class="fa-regular fa-sun sun"></i></i>
+              <br />
+              18°C / 10°C
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 5rem">
+              Tue <br />
+              <i class="fa-solid fa-cloud-rain rain"></i>
+              <br />
+              18°C / 10°C
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 5rem">
+              Wed <br />
+              <i class="fa-solid fa-cloud-rain rain"></i>
+              <br />
+              19°C / 12°C
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 5rem">
+              Thu <br />
+              <i class="fa-solid fa-cloud-sun cloudSun"></i>
+              <br />
+              17°C / 11°C
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 5rem">
+              Fri <br />
+              <i class="fa-solid fa-cloud-sun cloudSun"></i>
+              <br />
+              18°C / 12°C
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 5rem">
+              Sat <br />
+              <i class="fa-solid fa-sun sun"></i>
+              <br />
+              20°C / 10°C
+            </div>
+          </div>
+        </div>
+        </div>
         </div>
         <small>
           <a
