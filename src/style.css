@@ -34,7 +34,7 @@ h1 {
 }
 .units-forecast {
   position: relative;
-  font-size: 10px;
+  font-size: 9px;
   top: -5px;
 }
 
@@ -58,11 +58,12 @@ li {
   font-weight: 100;
   line-height: 19px;
 }
-li::first-letter {
+li:first-letter {
   text-transform: capitalize;
 }
 .btn {
   background-color: transparent;
+  box-shadow: 1px 1px 1px gray;
 }
 
 .card {
