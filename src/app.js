@@ -52,10 +52,12 @@ function displayForecast(response) {
           width="42"
           id="img-forecast"
         />
-              <br />
-               ${Math.round(forecastDay.temp.max)}°C / ${Math.round(
+              <br /><span class="temp-forecast">
+               ${Math.round(
+                 forecastDay.temp.max
+               )} <span class="units-forecast">°C</span> / ${Math.round(
           forecastDay.temp.min
-        )}°C
+        )}<span class="units-forecast">°C</span></span>
             </div>
           </div>
   `;

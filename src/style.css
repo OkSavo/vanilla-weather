@@ -32,6 +32,11 @@ h1 {
   font-size: 16px;
   top: -34px;
 }
+.units-forecast {
+  position: relative;
+  font-size: 10px;
+  top: -5px;
+}
 
 .weather-img {
   font-size: 300%;
@@ -62,11 +67,10 @@ li::first-letter {
 
 .card {
   background-color: transparent;
-}
-
-.card {
   text-align: center;
+  display: block;
+  height: 120px;
 }
-.img-forecast {
-  align-items: center;
+.temp-forecast {
+  top: +20px;
 }
