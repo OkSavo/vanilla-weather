@@ -19,27 +19,47 @@ function formateDate(timestamp) {
   return `${currentDay}  ${currentTime}`;
 }
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[day];
+}
+
 function displayForecast(response) {
-  console.log(response.data.daily);
+  let forecast = response.data.daily;
+
   let forecastElement = document.querySelector("#forecast");
 
-  let days = ["Thu", "Fri", "Sat", "Sun"];
-
   let forecastHTML = `<div class="row">`;
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 6) {
+      forecastHTML =
+        forecastHTML +
+        `
       <div class="col">
             <div class="card" style="width: 5rem">
-             <div class="weather-forecast-date">${day}</div>
+             <div class="weather-forecast-date">${formatDay(
+               forecastDay.dt
+             )}</div>
               
-              <i class="fa-solid fa-cloud-sun cloudSun"></i>
+              <img
+          src="http://openweathermap.org/img/wn/${
+            forecastDay.weather[0].icon
+          }@2x.png"
+          alt=""
+          width="42"
+          id="img-forecast"
+        />
               <br />
-              17°C / 11°C
+               ${Math.round(forecastDay.temp.max)}°C / ${Math.round(
+          forecastDay.temp.min
+        )}°C
             </div>
           </div>
   `;
+    }
   });
 
   forecastHTML = forecastHTML + `</div>`;

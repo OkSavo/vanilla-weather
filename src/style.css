@@ -63,3 +63,10 @@ li::first-letter {
 .card {
   background-color: transparent;
 }
+
+.card {
+  text-align: center;
+}
+.img-forecast {
+  align-items: center;
+}
