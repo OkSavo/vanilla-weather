@@ -41,6 +41,7 @@ h1 {
 .weather-img {
   font-size: 300%;
   font-weight: 100;
+  top: -5px;
 }
 .temp {
   display: inline;
@@ -74,4 +75,7 @@ li:first-letter {
 }
 .temp-forecast {
   top: +20px;
+}
+.img-forecast {
+  font-size: 200%;
 }

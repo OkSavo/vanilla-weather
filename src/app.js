@@ -49,7 +49,7 @@ function displayForecast(response) {
             forecastDay.weather[0].icon
           }@2x.png"
           alt=""
-          width="42"
+          width="50"
           id="img-forecast"
         />
               <br /><span class="temp-forecast">
@@ -125,7 +125,12 @@ function searchLocation(position) {
   let longitude = position.coords.longitude;
   let apiKey = "a60b931947ef27861e5c5ca7e5bbaf05";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(showWeather);
+  axios.get(apiUrl).then(displayTemp);
 }
 
-search("London");
+function getCurrentLocation(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(searchLocation);
+}
+
+document.addEventListener("DOMContentLoaded", getCurrentLocation);
