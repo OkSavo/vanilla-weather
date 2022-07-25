@@ -1,10 +1,11 @@
 body {
-  font-family: arial, sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: #444444;
 }
 .weather-app {
   margin: 30px auto;
   max-width: 700px;
+  font-weight: 400;
 }
 
 .weather {
@@ -17,20 +18,21 @@ body {
   margin-bottom: 20px;
 }
 h1 {
-  font-size: 24px;
-  font-weight: 100;
+  font-size: 28px;
+
   line-height: 28px;
   margin-bottom: 0;
 }
 .weather-temp strong {
   font-size: 64px;
   line-height: 1;
-  font-weight: 400;
+
   margin-bottom: 10px;
 }
 .units {
   position: relative;
   font-size: 16px;
+  font-weight: 300;
   top: -34px;
 }
 .units-forecast {
@@ -40,8 +42,8 @@ h1 {
 }
 
 .weather-img {
-  font-size: 300%;
-  font-weight: 100;
+  font-size: 400%;
+  font-weight: 150;
 }
 .temp {
   display: inline;
@@ -57,7 +59,7 @@ li {
   padding: 0;
 
   font-size: 16px;
-  font-weight: 100;
+
   line-height: 19px;
 }
 li:first-letter {
@@ -66,6 +68,7 @@ li:first-letter {
 .btn {
   background-color: transparent;
   box-shadow: 1px 1px 1px gray;
+  width: 40px;
 }
 
 .card {
@@ -82,4 +85,8 @@ li:first-letter {
 }
 .weather-description {
   font-size: 20px;
+}
+.form-control:focus {
+  border-color: #a0c7f5;
+  box-shadow: 0 0 0 0.25rem rgba(150, 150, 193, 0.25);
 }
