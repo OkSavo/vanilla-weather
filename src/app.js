@@ -32,7 +32,7 @@ function displayForecast(response) {
 
   let forecastElement = document.querySelector("#forecast");
 
-  let forecastHTML = `<div class="row">`;
+  let forecastHTML = `<div class="row align-items-center">`;
   forecast.forEach(function (forecastDay, index) {
     if (index < 6) {
       forecastHTML =

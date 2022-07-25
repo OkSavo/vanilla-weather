@@ -72,7 +72,7 @@ li:first-letter {
   background-color: transparent;
   text-align: center;
   display: block;
-  height: 120px;
+  height: 110px;
 }
 .temp-forecast {
   top: +20px;
@@ -80,6 +80,6 @@ li:first-letter {
 .img-forecast {
   font-size: 200%;
 }
-.description {
-  color: #ffbac3;
+.weather-description {
+  font-size: 20px;
 }
